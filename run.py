@@ -6,4 +6,4 @@ app = Flask(__name__)
 app.add_url_rule(
     "/", view_func=GraphQLView.as_view("graphql", schema=schema, graphiql=True)
 )
-app.run()
+app.run(debug=True)

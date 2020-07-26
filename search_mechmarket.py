@@ -79,7 +79,7 @@ def search_by_num():
     all_found = []
     # for submission in subreddit.stream.submissions():
     for submission in subreddit.new(limit=search_no):
-        print(datetime.datetime.now(), submission.link_flair_text)
+        print(datetime.datetime.now(), submission.title, submission.link_flair_text)
         all_found.append(submission)
         # print([attr for attr in attrs if attr[:1] != '_'])
     all_found = sorted(all_found, key=lambda x: x.created)
@@ -93,7 +93,7 @@ def search_by_num():
             if s in title.lower():
                 report[s].append([title, created, flair])
                 db_add(found)
-        sesson.commit()
+            sesson.commit()
     all_found = []
     for s, v in report.items():
         if v:
@@ -104,4 +104,5 @@ def search_by_num():
 
 
 sesson = Sesson()
+search_by_num()
 search()
