@@ -3,6 +3,9 @@ import datetime
 from models import SubRedditModel
 from db import Sesson
 
+import sentry_sdk
+sentry_sdk.init("https://007e055e5fe64e35b55b36140bf6b18d@o371271.ingest.sentry.io/5363923")
+
 reddit = praw.Reddit(
     client_id="1EkdAIYXKO82XQ",
     client_secret="Po0hAGpUutXIxOCNhHhiYu8__1g",
