@@ -13,7 +13,7 @@ reddit = praw.Reddit(
 )
 
 search_for = ("dox", "planck", "kyria", "corne", "minidox")
-search_no = 1000
+search_no = 5000
 report = {}
 for s in search_for:
     report[s] = []
