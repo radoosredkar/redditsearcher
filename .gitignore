@@ -1,5 +1,5 @@
 # venv
-reddit/*
+# reddit/* want venv in git
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
